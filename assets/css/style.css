@@ -1,0 +1,97 @@
+/* Google fonts import*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+/* Asterisk wildcard selector to override default styles added by the browser*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+/* Generic project styles*/
+    color: #3a3a3a;
+    font-family: 'Lato', sans-serif;
+}
+/* Generic project styles */
+
+
+header {
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#logo {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
+#menu {
+    list-style-type: none;
+    letter-spacing: 4px;
+    font-size: 110%;
+    
+}
+
+#menu > li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/*Navigation bar toggle*/
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+/*Nav toggle*/
+#nav-toggle:checked~nav {
+    display:block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+main {
+    background-color: lightskyblue;
+    /* Make main element take surplus amount of space */
+    flex:1 0 auto;
+    margin-top: 50;
+}
+
+footer {
+    background-color: lightslategray;
+}
