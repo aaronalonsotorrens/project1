@@ -1,28 +1,24 @@
-/* Google fonts import*/
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
-
-/* Asterisk wildcard selector to override default styles added by the browser*/
-
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* General styles*/
+/* General styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-/* Generic project styles*/
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
-/* Generic project styles */
 
-
+/* Header */
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -30,10 +26,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: baseline;
-    
 }
 
 header a {
@@ -44,16 +39,14 @@ header a {
 #logo {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
-    font-size: 200%;
-    line-height: 75px;
-    margin: 0 0.5rem;
+    color: #252525;
+    font-size: 180%;
 }
 
 #menu {
-    list-style-type: none;
-    letter-spacing: 4px;
     font-size: 110%;
-    
+    letter-spacing: 4px;
+    list-style-type: none;
 }
 
 #menu > li {
@@ -64,7 +57,7 @@ header a {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/*Navigation bar toggle*/
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -75,9 +68,10 @@ nav {
     display: none;
     top: 100%;
 }
-/*Nav toggle*/
+
+/* Nav toggle */
 #nav-toggle:checked~nav {
-    display:block;
+    display: block;
 }
 
 #nav-toggle {
@@ -88,22 +82,22 @@ nav {
     font-size: 2rem;
 }
 
-.main-content {
-    background-color: lightskyblue;
-    /* Make main element take surplus amount of space */
-    flex:1 0 auto;
-    margin-top: 79px;
-    width: 100%;
+/* Main content */
+main {
+    background-color: lightblue;
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+    margin-top: 47px;
 }
 
+/* Footer */
 footer {
-    background-color: lightslategray;
+    background-color: orange;
 }
 
-/* Media query: tablets and larger(768px and up) */
-
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-    /* Working on the header for different devices */
+    /* Header */
     nav {
         display: block;
         position: relative;
@@ -111,15 +105,35 @@ footer {
         width: fit-content;
         padding-right: 1rem;
     }
+
     #menu {
         display: flex;
     }
-    /* Creates space between the items within the list */
+
     #menu > li {
         padding-left: 1rem;
     }
-    /* Hide the toggle symbol as it not needed in bigger screens*/
+
     .nav-toggle-label {
         display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
     }
 }
