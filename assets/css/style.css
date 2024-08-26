@@ -44,6 +44,9 @@ header a {
 #logo {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
+    font-size: 200%;
+    line-height: 75px;
+    margin: 0 0.5rem;
 }
 
 #menu {
@@ -85,11 +88,12 @@ nav {
     font-size: 2rem;
 }
 
-main {
+.main-content {
     background-color: lightskyblue;
     /* Make main element take surplus amount of space */
     flex:1 0 auto;
-    margin-top: 50;
+    margin-top: 79px;
+    width: 100%;
 }
 
 footer {
